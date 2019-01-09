@@ -101,6 +101,11 @@ $CMP R
 D Resistor
 $ENDCMP
 #
+$CMP R_Array_4
+D Resistor Array / Network
+K resistor array
+$ENDCMP
+#
 $CMP R_PACK4
 D 4 resistors Pack
 K R DEV

@@ -1,12 +1,13 @@
 EESchema Schematic File Version 4
+LIBS:mppt-10a-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 4
 Title "10A MPPT Charge Controller with USB"
-Date "2018-05-14"
-Rev "0.2"
+Date "2018-08-23"
+Rev "0.4"
 Comp "Libre Solar"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: http://libre.solar"
@@ -14,58 +15,29 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 4800 1900 1400 1000
+S 5100 2300 1400 1000
 U 58A68DC9
 F0 "DCDC power stage" 50
 F1 "dcdc.sch" 50
-F2 "PWM_HS" I L 4800 2000 50 
-F3 "PWM_LS" I L 4800 2100 50 
-F4 "BAT-" I R 6200 2600 50 
-F5 "DCDC_IN" O R 6200 2200 50 
-F6 "DCDC-" O R 6200 2500 50 
-F7 "~LOAD_EN" I L 4800 2300 50 
-F8 "LOAD-SW" O R 6200 2700 50 
 $EndSheet
 $Sheet
-S 2600 1900 1200 3100
+S 2600 2300 1400 1000
 U 58A68DCB
 F0 "MCU" 50
 F1 "mcu.sch" 50
-F2 "TIM1_CH1N" O R 3800 2100 50 
-F3 "TIM1_CH1" O R 3800 2000 50 
-F4 "V_BAT" I R 3800 2800 50 
-F5 "V_SOLAR" I R 3800 2700 50 
-F6 "I_LOAD" I R 3800 3100 50 
-F7 "I_DCDC" I R 3800 3000 50 
-F8 "USB_DM" I R 3800 4500 50 
-F9 "USB_DP" I R 3800 4400 50 
-F10 "TEMP_INT" I R 3800 4100 50 
-F11 "TEMP_BAT" I R 3800 4000 50 
-F12 "DAC" O R 3800 3200 50 
-F13 "~LOAD_EN" O R 3800 2300 50 
-F14 "USB_PWR_EN" O R 3800 4700 50 
-F15 "USB_PWR_FLG" I R 3800 4800 50 
 $EndSheet
 $Sheet
-S 7500 1900 1200 1100
+S 7600 2300 1400 1000
 U 58C18D5C
 F0 "Power Supply" 50
 F1 "power_supply.sch" 50
-F2 "USB_DP" B L 7500 2400 50 
-F3 "USB_DM" B L 7500 2500 50 
-F4 "USB_PWR_EN" I L 7500 2700 50 
-F5 "USB_PWR_FLG" O L 7500 2800 50 
 $EndSheet
-Wire Wire Line
-	3800 2000 4800 2000
-Wire Wire Line
-	4800 2100 3800 2100
-Text Notes 3550 1350 0    200  ~ 0
+Text Notes 3050 1400 0    200  ~ 0
 10A MPPT Charge Controller with USB
-Text Notes 1500 6100 0    100  ~ 0
+Text Notes 1450 5550 0    100  ~ 0
 Main Specifications
-Text Notes 1500 6800 0    50   ~ 0
-- 12V battery voltage\n- 10A max. charge current\n- 55V max. solar input\n- 32bit ARM MCU (STM32F072)\n- Expandable via Olimex Universal Extension Connector (UEXT) featuring\n   I2C, Serial and SPI interface (e.g. used for display, WIFI communication, etc.)\n- USB charging\n
+Text Notes 1450 6400 0    50   ~ 0
+- 12V battery voltage\n- 10A max. charge current\n- 55V max. solar input\n- 32bit ARM MCU (STM32L072)\n- Expandable via Olimex Universal Extension Connector (UEXT) featuring\n   I2C, Serial and SPI interface (e.g. used for display, WIFI communication, etc.)\n- USB charging\n- High-side load switching\n
 $Comp
 L Project:Logo_Open_Hardware_Small LOGO2
 U 1 1 58C36283
@@ -74,6 +46,7 @@ F 0 "LOGO2" H 10550 6375 50  0000 C CNN
 F 1 "OPEN_HARDWARE" H 10550 5875 50  0000 C CNN
 F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 10550 6100 60  0001 C CNN
 F 3 "" H 10550 6100 60  0001 C CNN
+F 4 "+info" H 0   0   50  0001 C CNN "Config"
 	1    10550 6100
 	1    0    0    -1  
 $EndComp
@@ -85,95 +58,16 @@ F 0 "LOGO1" H 9650 6375 50  0000 C CNN
 F 1 "LIBRE_SOLAR" H 9650 5875 50  0000 C CNN
 F 2 "LibreSolar:LIBRESOLAR_LOGO" H 9670 6090 60  0001 C CNN
 F 3 "" H 9670 6090 60  0001 C CNN
+F 4 "+info" H 9650 6100 50  0001 C CNN "Config"
 	1    9650 6100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 2200 6600 2200
-$Sheet
-S 4800 3200 1400 1200
-U 58E22D17
-F0 "Analog Frontend" 50
-F1 "analog_frontend.sch" 50
-F2 "V_SOLAR" O R 6200 3800 50 
-F3 "TEMP_INT" O L 4800 4100 50 
-F4 "DCDC_SHUNT+" I R 6200 3500 50 
-F5 "LOAD_SHUNT+" I R 6200 3300 50 
-F6 "LOAD_SHUNT-" I R 6200 3400 50 
-F7 "DCDC_SHUNT-" I R 6200 3600 50 
-F8 "V_SOLAR_ADC" O L 4800 3300 50 
-F9 "V_BAT_ADC" O L 4800 3400 50 
-F10 "I_LOAD_ADC" O L 4800 3700 50 
-F11 "I_DCDC_ADC" O L 4800 3600 50 
-F12 "REF_DIFF_AMP" I L 4800 3800 50 
-$EndSheet
-Wire Wire Line
-	3800 2300 4800 2300
-Text Notes 5050 2650 0    100  ~ 0
+Text Notes 5500 2800 0    100  ~ 0
 DC/DC
-Text Notes 3300 3550 0    100  ~ 0
+Text Notes 3100 2800 0    100  ~ 0
 MCU
-Text Notes 5400 4150 0    100  ~ 0
-Analog
-Text Notes 8100 2550 0    100  ~ 0
+Text Notes 8000 3000 0    100  ~ 0
 Power\n\nUSB
-Wire Wire Line
-	3800 2700 4500 2700
-Wire Wire Line
-	4500 2700 4500 3300
-Wire Wire Line
-	4500 3300 4800 3300
-Wire Wire Line
-	4800 3400 4400 3400
-Wire Wire Line
-	4400 3400 4400 2800
-Wire Wire Line
-	4400 2800 3800 2800
-Wire Wire Line
-	3800 3000 4200 3000
-Wire Wire Line
-	4200 3000 4200 3600
-Wire Wire Line
-	4200 3600 4800 3600
-Wire Wire Line
-	4800 3700 4100 3700
-Wire Wire Line
-	4100 3700 4100 3100
-Wire Wire Line
-	4100 3100 3800 3100
-Wire Wire Line
-	3800 3200 4000 3200
-Wire Wire Line
-	4000 3200 4000 3800
-Wire Wire Line
-	4000 3800 4800 3800
-Wire Wire Line
-	3800 4100 4800 4100
-Wire Wire Line
-	6200 2600 6400 2600
-Wire Wire Line
-	6200 2700 6300 2700
-Wire Wire Line
-	6200 2500 6500 2500
-Wire Wire Line
-	6300 2700 6300 3300
-Wire Wire Line
-	6300 3300 6200 3300
-Wire Wire Line
-	6200 3400 6400 3400
-Wire Wire Line
-	6400 2600 6400 3400
-Wire Wire Line
-	6400 3500 6200 3500
-Connection ~ 6400 3400
-Wire Wire Line
-	6200 3600 6500 3600
-Wire Wire Line
-	6500 3600 6500 2500
-Wire Wire Line
-	6600 2200 6600 3800
-Wire Wire Line
-	6600 3800 6200 3800
 $Comp
 L Mechanical:MountingHole_Pad MK1
 U 1 1 595388B0
@@ -182,6 +76,7 @@ F 0 "MK1" H 6100 6246 50  0000 L CNN
 F 1 "Mounting_Hole" H 6100 6155 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 6000 6200 50  0001 C CNN
 F 3 "" H 6000 6200 50  0001 C CNN
+F 4 "+info" H 0   0   50  0001 C CNN "Config"
 	1    6000 6200
 	1    0    0    -1  
 $EndComp
@@ -193,6 +88,7 @@ F 0 "MK2" H 6100 6546 50  0000 L CNN
 F 1 "Mounting_Hole" H 6100 6455 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 6000 6500 50  0001 C CNN
 F 3 "" H 6000 6500 50  0001 C CNN
+F 4 "+info" H 0   0   50  0001 C CNN "Config"
 	1    6000 6500
 	1    0    0    -1  
 $EndComp
@@ -204,13 +100,10 @@ F 0 "MK3" H 6100 6846 50  0000 L CNN
 F 1 "Mounting_Hole" H 6100 6755 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 6000 6800 50  0001 C CNN
 F 3 "" H 6000 6800 50  0001 C CNN
+F 4 "+info" H 0   0   50  0001 C CNN "Config"
 	1    6000 6800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6400 3400 6400 3500
-Wire Wire Line
-	3800 4000 4800 4000
 Wire Wire Line
 	6000 6300 5800 6300
 Wire Wire Line
@@ -234,26 +127,6 @@ F 3 "" H 5800 7300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5800 6900
-Wire Wire Line
-	3800 4400 4600 4400
-Wire Wire Line
-	4600 4400 4600 4600
-Wire Wire Line
-	4600 4600 7000 4600
-Wire Wire Line
-	7000 4600 7000 2400
-Wire Wire Line
-	7000 2400 7500 2400
-Wire Wire Line
-	3800 4500 4500 4500
-Wire Wire Line
-	4500 4500 4500 4700
-Wire Wire Line
-	4500 4700 7100 4700
-Wire Wire Line
-	7100 4700 7100 2500
-Wire Wire Line
-	7100 2500 7500 2500
 $Comp
 L Mechanical:MountingHole_Pad MK4
 U 1 1 5B038156
@@ -262,29 +135,10 @@ F 0 "MK4" H 6100 7146 50  0000 L CNN
 F 1 "Mounting_Hole" H 6100 7055 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 6000 7100 50  0001 C CNN
 F 3 "" H 6000 7100 50  0001 C CNN
+F 4 "+info" H 0   0   50  0001 C CNN "Config"
 	1    6000 7100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5800 6900 5800 7300
-Wire Wire Line
-	3800 4700 4300 4700
-Wire Wire Line
-	4300 4700 4300 4900
-Wire Wire Line
-	4300 4900 7300 4900
-Wire Wire Line
-	7300 4900 7300 2700
-Wire Wire Line
-	7300 2700 7500 2700
-Wire Wire Line
-	7500 2800 7400 2800
-Wire Wire Line
-	7400 2800 7400 5000
-Wire Wire Line
-	7400 5000 4200 5000
-Wire Wire Line
-	4200 5000 4200 4800
-Wire Wire Line
-	4200 4800 3800 4800
 $EndSCHEMATC

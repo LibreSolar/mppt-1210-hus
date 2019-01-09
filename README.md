@@ -1,8 +1,12 @@
-# 10A MPPT Controller with USB
+# 10A MPPT Charge Controller with USB
 
-![Development Stage](https://img.shields.io/badge/development%20stage-beta-orange.svg) Prototype built, development ongoing (major issues might still be open).
+![Development Stage](https://img.shields.io/badge/development%20stage-release%20candidate-yellow.svg) Tested prototype, only minor issues left.
 
-Schematic: [mppt-10a.pdf](mppt-10a.pdf)
+Schematic: [PDF file](mppt-10a.pdf) in repository
+
+Gerber files: [PCB ordering](http://libre.solar/docs/pcb_ordering)  documentation
+
+Bill of Materials: [BOM export](http://libre.solar/docs/bom) from KiCAD
 
 ![Charge controller PCB](mppt-10a.png)
 
@@ -10,10 +14,11 @@ Schematic: [mppt-10a.pdf](mppt-10a.pdf)
 - 12V battery voltage
 - 10A max. charge current
 - 55V max. solar input
-- 32bit ARM MCU (STM32F072)
+- Low-power 32bit ARM MCU (STM32L072)
 - Expandable via Olimex Universal Extension Connector (UEXT) featuring
    I2C, Serial and SPI interface (e.g. used for display, WIFI communication, etc.)
 - USB charging
+- High-side load switching
 
 
 ## Built-in protection:
