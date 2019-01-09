@@ -1,5 +1,9 @@
 # 10A MPPT Controller with USB
 
+![Development Stage](https://img.shields.io/badge/development%20stage-beta-orange.svg) Prototype built, development ongoing (major issues might still be open).
+
+Schematic: [mppt-10a.pdf](mppt-10a.pdf)
+
 ![Charge controller PCB](mppt-10a.png)
 
 ## Features:
