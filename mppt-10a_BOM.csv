@@ -1,0 +1,73 @@
+Component;Description;Part;References;Value;Footprint;Quantity Per PCB;Datasheet;PartNumber;Manufacturer;Remarks;Alternative;Supplier;Alternatives
+1;Unpolarized capacitor;C;C9 C10 C16 C19 C22 C24 C25 C26 C30 C31 C32 C34 C40 C41 C42;100n;C_0603_1608;15;;CC0603KRX7R9BB104;Yageo;;;;
+2;Unpolarized capacitor;C;C35;100p;C_0603_1608;1;;CC0603JRNPO9BN101;Yageo;NP0/C0G;;;
+3;Unpolarized capacitor;C;C4 C7 C8 C11 C13 C17 C18 C27 C28 C37;10n;C_0603_1608;10;;GCM188R72A103KA37D;Murata;100V, X7R 100V (not needed), X7R;;;
+4;Unpolarized capacitor;C;C6;1n;C_0603_1608;1;;GRM1885C2A102JA01D;Murata;NP0/C0G;;;
+5;Unpolarized capacitor;C;C14 C29;1u;C_0805_2012;2;;CC0805KKX7R9BB105;Yageo;;;;
+6;Unpolarized capacitor;C;C12 C23 C33 C38 C39;2.2u;C_0603_1608;5;;GRM188R61E225KA12D;Murata;25V, X5R;;;
+7;Unpolarized capacitor;C;C15;22u;C_0805_2012;1;;GRM21BR61E226ME44L;Murata;25V, X5R;;;
+8;Unpolarized capacitor;C;C3;4.7u;C_1210_3225;1;;GRJ32DC72A475KE11L;Murata;100V, X7S;;;
+9;Unpolarized capacitor;C;C20 C21;47u;C_0805_2012;2;;GRM21BR61A476ME15K;Murata;10V;;;
+10;Unpolarized capacitor;C;C36;6.8n;C_0603_1608;1;;CC0603KRX7R9BB682;Yageo;;;;
+11;Polarised capacitor;CP;C1 C2;680u;CP_Radial_D16.0mm_P7.50mm;2;;EKYB630ELL681ML20S;United Chemi-Con;63V, 2.25A, 16x20;Panasonic EEU-FR1J561SB;;
+12;Polarised capacitor;CP;C5;820u;CP_Radial_D10.0mm_P5.00mm;1;;EEU-FR1E821;Panasonic;25V, 2.18A, 10x20 mm;;;
+13;Diode;D;D1 D4;1N4148;D_SOD-123;2;;1N4148W-7-F;Diodes Inc.;;;;
+14;Diode zener;D_Zener;D5;SMBJ24A;D_SMB;1;https://en.wikipedia.org/wiki/Zener_diode;SMBJ24A;Bourns;;;;
+15;Diode Schottky;D_Schottky;D2 D3 D6;SS14FL;D_SOD-123;3;;SS14FL;ON Semiconductor;;Nexperia PMEG4010EGWX;;
+16;Fuse;Fuse;F1;25A;Fuse_Clip_5x20mm;1;;FC-203 bright tin;Bel fuse;Order 2x clip + fuse Littelfuse 0217015.MXP;Littelfuse 01110501Z, Keystone 3521;;
+17;;Screw_Terminal_1x02;J3;BAT;Phoenix_Contact_PT_2,5-2-7,5-H;1;;1988105;Phoenix Contact;;;;
+18;;Screw_Terminal_1x02;J2;LOAD;Phoenix_Contact_PT_2,5-2-7,5-H;1;;1988105;Phoenix Contact;;;;
+19;;Screw_Terminal_1x02;J1;SOLAR;Phoenix_Contact_PT_2,5-2-7,5-H;1;;1988105;Phoenix Contact;;;;
+20;;UEXT;J4;UEXT;Box_Header_2x05x2.54mm_Straight;1;;;;;;;
+21;USB Type A connector (stacked);USB_A_stacked;J5;USB_A_stacked;USB_A_Wuerth_61400826021_Horizontal_Stacked;1; ~;UJ2-ADH-1-TH;CUI;;Wuerth 61400826021;;
+22;Inductor;L;L3;10uH;Bourns_SRN6045TA;1;;NR6045T100M;Tayo Yuden;;Bourns SRN6045TA-100M;;
+23;Inductor;L;L2;2.2uH;L_0805_2012Metric;1;;DFE201210U-2R2M=P2;Murata;;;;
+24;Inductor with Iron Core;L_Core_Iron;L1;47uH;L-FERYSTER-DTMSS-27;1;;DTMSS-27/0,047/15-HX;Feryster;;;Feryster;
+25;Inductor;L;L4;600R;L_0603_1608Metric;1;;BLM18AG601SN1D;Murata;;;;
+26;;D_LED;LED2 LED3;LED_green;LED_0603_1608Metric;2;;LTST-C190GKT;Lite-On;;;;
+27;;D_LED;LED1;LED_red;LED_0603_1608Metric;1;;LTST-C190KRKT;Lite-On;red;;;
+28;Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/);Conn_01x02;P1;CONN_01X02;PinHeader_1x02_P2.54mm_Vertical;1;;;;;;;
+29;Transistor N-MOSFET (general);Q_NMOS;Q1 Q2 Q3 Q4;PSMN5R2-60YLX;5X6_MOSFET;4;;PSMN5R2-60YLX;Nexperia;;;;
+30;Resistor;R;R33 R34;0R;R_0603_1608;2;;RC0603FR-070RL;Yageo;;;;
+31;Resistor;R;R24 R25 R50;100k;R_0603_1608;3;;RC0603FR-07100KL;Yageo;;;;
+32;Resistor;R;R16 R23 R27 R29;10k;R_0603_1608;4;;RC0603FR-0710KL;Yageo;;;;
+33;Resistor;R;R14 R15 R21 R22;150k;R_0603_1608;4;;RC0603FR-07150KL;Yageo;;;;
+34;Resistor;R;R2 R36 R38;1M;R_0603_1608;3;;RC0603FR-071ML;Yageo;;;;
+35;Resistor;R;R4;2.2;R_1206_3216;1;;RC1206FR-072R2L;Yageo;;;;
+36;Resistor;R;R5 R7 R8 R11 R12 R13 R18 R19 R20 R30 R31 R32 R44;2.2k;R_0603_1608;13;;RC0603FR-072K2L;Yageo;;;;
+37;Resistor;R;R1 R3 R10;4.7;R_0805_2012;3;;RC0805FR-074R7L;Yageo;;;;
+38;Resistor;R;R28;45.3k;R_0603_1608;1;;RC0603FR-0745K3L;Yageo;;;;
+39;Resistor;R;R37 R42 R43;470;R_0603_1608;3;;RC0603FR-07470RL;Yageo;;;;
+40;Resistor;R;R6 R17;4m;R_Bourns_CRE2512;2;;CRE2512-FZ-R004E-3;Bourns;;;;
+41;Resistor;R;R26;5.6k;R_0603_1608;1;;RC0603FR-075K6L;Yageo;;;;
+42;Resistor;R;R9 R46;56k;R_0603_1608;2;;RC0603FR-0756KL;Yageo;;;;
+43;Resistor;R;R35;6.8k;R_0603_1608;1;;RC0603FR-075K6L;Yageo;;;;
+44;temperature dependent resistor, negative temperature coefficient (NTC);Thermistor_NTC;RT1;10k;R_0603_1608;1;;NTCG163JF103FT1S;TDK;;;;
+45;Push button switch, generic, two pins;SW_Push;SW2;SW_PUSH;SW_SPST_6mm;1;;PTS645SM43SMTR92LFS;C&K;;;;
+46;;ST_Nucleo_SWD;SWD1;ST_Nucleo_SWD;PinHeader_1x06_P2.54mm_Vertical;1;;;;;;;
+47;0.8A Ic, 45V Vce, NPN Transistor, SOT-23;BC817;T1 T3;MMBT3904;SOT-23;2;http://www.fairchildsemi.com/ds/BC/BC817.pdf;MMBT3904-7-F;Diodes Inc.;;;;
+48;Microchip 24AA01 1K I2C EEPROM;24AA01;U6;24AA01;SOT-23-5;1;;24AA32AFT-I/OT;Microchip;;;;
+49;300mA low dropout linear regulator, shutdown pin, 1.5V fixed positive output, SOT-23-5 package;AP2210-3.3;U5;AP2210-3.3;SOT-23-5;1;http://www.diodes.com/_files/datasheets/AP131.pdf;AP2210K-3.3TRG1;Diodes Inc.;;MIC5225;;
+50;Single power-distribution switcher;AP22802A;U3;AP22802A;SOT-23-5;1;;AP22802AW5-7;Diodes Inc.;;;;
+51;;MP2307;U9;AP6502;TI_SO-PowerPAD-8_ThermalVias;1;;AP6502ASP-13;Diodes Inc.;;;;MP2307DN-LF-Z
+52;Transient voltage suppressor designed to protect high speed data lines from ESD, EFT, and lightning;NUP4202;U4;IP4220CZ6;SOT-23-6;1;http://www.onsemi.com/pub_link/Collateral/NUP4202W1-D.PDF;IP4220CZ6;Nexperia;;NUP4202;;
+53;Dual Opamp, SOIC-8/DIP-8/SSOP-8/TO-99;Opamp_Dual_Generic;U7;LM258;SOIC-8_3.9x4.9mm_Pitch1.27mm;1;;LM258DR;Texas Instruments;;;;
+54;Half-Bridge Gate Driver, Output Current 1.0A, 100V, SOIC-8;LM5109BMA;U1;LM5109BMA;SOIC-8_3.9x4.9mm_P1.27mm;1;http://www.ti.com/lit/ds/symlink/lm5109b.pdf;LM5109BMAX/NOPB;Texas Instruments;;;;
+55;;STM32F072CB;U2;STM32F072CB;LQFP-48_7x7mm_P0.5mm;1;;STM32F072CBT6;STMicroelectronics;;;;
+56;USB Dedicated Charging Port Controller;TPS2513;U8;TPS2513;SOT-23-6;1;http://www.ti.com/lit/ds/symlink/tps2513.pdf;TPS2513DBVR;Texas Instruments;;UC2632;;
+57;Three pin ceramic resonator;Resonator_Small;Y1;8MHz;Resonator_Murata_CSTCE_G;1;;CSTCE8M00GH5L99-R0;Murata;0.07% tolerance;;;
+
+
+
+
+
+Component Groups:;57
+Component Count:;124
+Fitted Components:;124
+Number of PCBs:;1
+Total components:;124
+Schematic Version:;0.2
+Schematic Date:;2018-05-14
+BoM Date:;14/06/2018 10:02:33
+Schematic Source:;D:\LibreSolar\2_Development\04_Hardware\cloudsolarchargecontroller\cloudsolarchargecontroller.sch
+KiCad Version:;Eeschema (5.0.0-rc2-dev-444-g2974a2c10)
