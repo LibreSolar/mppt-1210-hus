@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name Project)(type Legacy)(uri ${KIPRJMOD}/symbol.lib)(options "")(descr "All symbols contained in this project"))
+  (lib (name mptt-10a-rescue)(type Legacy)(uri ${KIPRJMOD}/mptt-10a-rescue.lib)(options "")(descr ""))
 )

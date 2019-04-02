@@ -1,16 +1,16 @@
 EESchema Schematic File Version 4
-LIBS:mppt-10a-cache
-EELAYER 26 0
+LIBS:mptt-10a-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "10A MPPT Charge Controller with USB"
-Date "2018-08-23"
-Rev "0.4"
-Comp "Libre Solar"
+Date "2019-03-24"
+Rev "0.5"
+Comp "Libre Solar / Connected Energy"
 Comment1 "Author: Martin Jäger"
-Comment2 "Website: http://libre.solar"
+Comment2 "Website: https://libre.solar"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -32,11 +32,11 @@ U 58C18D5C
 F0 "Power Supply" 50
 F1 "power_supply.sch" 50
 $EndSheet
-Text Notes 3050 1400 0    200  ~ 0
-10A MPPT Charge Controller with USB
-Text Notes 1450 5550 0    100  ~ 0
+Text Notes 2300 1500 0    200  ~ 0
+10A MPPT Solar Charge Controller with USB
+Text Notes 2600 4700 0    100  ~ 0
 Main Specifications
-Text Notes 1450 6400 0    50   ~ 0
+Text Notes 2600 5500 0    50   ~ 0
 - 12V battery voltage\n- 10A max. charge current\n- 55V max. solar input\n- 32bit ARM MCU (STM32L072)\n- Expandable via Olimex Universal Extension Connector (UEXT) featuring\n   I2C, Serial and SPI interface (e.g. used for display, WIFI communication, etc.)\n- USB charging\n- High-side load switching\n
 $Comp
 L Project:Logo_Open_Hardware_Small LOGO2
@@ -140,5 +140,10 @@ F 4 "+info" H 0   0   50  0001 C CNN "Config"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5800 6900 5800 7300
+	5800 6900 5800 7200
+Wire Wire Line
+	6000 7200 5800 7200
+Connection ~ 5800 7200
+Wire Wire Line
+	5800 7200 5800 7300
 $EndSCHEMATC
