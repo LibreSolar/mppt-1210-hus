@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:mptt-10a-cache
+LIBS:mppt-10a-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "10A MPPT Charge Controller with USB"
-Date "2019-03-24"
-Rev "0.5"
+Date "2019-04-09"
+Rev "0.6"
 Comp "Libre Solar / Connected Energy"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
@@ -625,7 +625,6 @@ Text Notes 4200 3800 0    50   ~ 0
 LED1 controlled by LPTIM1_OUT\nin stop mode: only PB2 possible
 Wire Wire Line
 	2200 3900 1600 3900
-NoConn ~ 3500 3200
 Wire Wire Line
 	2200 4000 1600 4000
 Wire Wire Line
@@ -1422,6 +1421,10 @@ Wire Wire Line
 	8500 5900 8500 6100
 Wire Wire Line
 	3500 3100 3600 3100
-Text GLabel 3600 3100 2    50   Input ~ 0
+Text GLabel 3600 3200 2    50   Input ~ 0
 5V_PG
+Text GLabel 3600 3100 2    50   Output ~ 0
+V_SOLAR_EN
+Wire Wire Line
+	3600 3200 3500 3200
 $EndSCHEMATC

@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:mptt-10a-cache
+LIBS:mppt-10a-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
 Title "10A MPPT Charge Controller with USB"
-Date "2019-03-24"
-Rev "0.5"
+Date "2019-04-09"
+Rev "0.6"
 Comp "Libre Solar / Connected Energy"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
@@ -470,12 +470,11 @@ L Device:Q_PMOS_GSD Q6
 U 1 1 5B796B03
 P 6600 4500
 F 0 "Q6" H 6805 4454 50  0000 L CNN
-F 1 "DMP3099L-7" H 6805 4545 50  0000 L CNN
+F 1 "BSS83P" H 6805 4545 50  0000 L CNN
 F 2 "LibreSolar:SOT-23" H 6800 4600 50  0001 C CNN
 F 3 "~" H 6600 4500 50  0001 C CNN
-F 4 "Diodes Inc." H 6600 4500 50  0001 C CNN "Manufacturer"
-F 5 "DMP3099L-7" H 6600 4500 50  0001 C CNN "PartNumber"
-F 6 "Higher current than standard BSS84 needed" H 6600 4500 50  0001 C CNN "Remarks"
+F 4 "Infineon" H 6600 4500 50  0001 C CNN "Manufacturer"
+F 5 "BSS83P H6327" H 6600 4500 50  0001 C CNN "PartNumber"
 	1    6600 4500
 	1    0    0    1   
 $EndComp
@@ -913,12 +912,11 @@ L Device:Q_PMOS_GSD Q5
 U 1 1 5CABC2C6
 P 6300 5500
 F 0 "Q5" H 6505 5454 50  0000 L CNN
-F 1 "DMP3099L-7" H 6505 5545 50  0000 L CNN
+F 1 "BSS83P" H 6505 5545 50  0000 L CNN
 F 2 "LibreSolar:SOT-23" H 6500 5600 50  0001 C CNN
 F 3 "~" H 6300 5500 50  0001 C CNN
-F 4 "Diodes Inc." H 6300 5500 50  0001 C CNN "Manufacturer"
-F 5 "DMP3099L-7" H 6300 5500 50  0001 C CNN "PartNumber"
-F 6 "Higher current than standard BSS84 needed" H 6300 5500 50  0001 C CNN "Remarks"
+F 4 "Infineon" H 6300 5500 50  0001 C CNN "Manufacturer"
+F 5 "BSS83P H6327" H 6300 5500 50  0001 C CNN "PartNumber"
 	1    6300 5500
 	1    0    0    1   
 $EndComp

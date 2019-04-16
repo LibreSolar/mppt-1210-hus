@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:mptt-10a-cache
+LIBS:mppt-10a-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "10A MPPT Charge Controller with USB"
-Date "2019-03-24"
-Rev "0.5"
+Date "2019-04-09"
+Rev "0.6"
 Comp "Libre Solar / Connected Energy"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
