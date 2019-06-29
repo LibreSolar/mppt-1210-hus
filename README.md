@@ -2,13 +2,13 @@
 
 ![Development Stage](https://img.shields.io/badge/development%20stage-release%20candidate-yellow.svg) Tested prototype, only minor issues left.
 
-Schematic: [PDF file](mppt-10a.pdf) in repository
+Schematic: [PDF file](mppt-1210-hus.pdf) in repository
 
-Gerber files: [PCB ordering](http://libre.solar/docs/pcb_ordering)  documentation
+Gerber files: [PCB ordering](http://libre.solar/docs/pcb_ordering) documentation
 
 Bill of Materials: [BOM export](http://libre.solar/docs/bom) from KiCAD
 
-![Charge controller PCB](mppt-10a.png)
+![Charge controller PCB](mppt-1210-hus.jpg)
 
 ## Features:
 - 12V battery voltage

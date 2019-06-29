@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:mppt-10a-cache
+LIBS:mppt-1210-hus-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
 Title "10A MPPT Charge Controller with USB"
-Date "2019-04-09"
-Rev "0.6"
+Date "2019-06-03"
+Rev "0.6.1"
 Comp "Libre Solar / Connected Energy"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
@@ -200,11 +200,11 @@ L Device:L_Core_Iron L1
 U 1 1 58ACD441
 P 7000 1900
 F 0 "L1" V 7125 1900 50  0000 C CNN
-F 1 "47uH" V 6925 1900 50  0000 C CNN
+F 1 "33uH" V 6925 1900 50  0000 C CNN
 F 2 "LibreSolar:L-FERYSTER-DTMSS-27_33uH" V 7200 1900 50  0001 C CNN
 F 3 "" H 7000 1900 50  0001 C CNN
 F 4 "Feryster" H -400 -150 50  0001 C CNN "Manufacturer"
-F 5 "DTMSS-27/0,047/15-HX" H -400 -150 50  0001 C CNN "PartNumber"
+F 5 "DTMSS-27/0,033/20-HX" H -400 -150 50  0001 C CNN "PartNumber"
 F 6 "Feryster" H 7000 1900 60  0001 C CNN "Supplier"
 	1    7000 1900
 	0    -1   -1   0   
@@ -1687,11 +1687,11 @@ L Project:R R32
 U 1 1 5CDF3ADD
 P 2100 3600
 F 0 "R32" V 2030 3600 50  0000 C CNN
-F 1 "1M" V 2170 3600 50  0000 C CNN
+F 1 "100k" V 2170 3600 50  0000 C CNN
 F 2 "LibreSolar:R_0603_1608" H 2100 3600 50  0001 C CNN
 F 3 "" H 2100 3600 50  0000 C CNN
 F 4 "Yageo" H -1100 1050 50  0001 C CNN "Manufacturer"
-F 5 "RC0603FR-071ML" H -1100 1050 50  0001 C CNN "PartNumber"
+F 5 "RC0603FR-07100KL" H -1100 1050 50  0001 C CNN "PartNumber"
 	1    2100 3600
 	1    0    0    -1  
 $EndComp
@@ -1700,11 +1700,11 @@ L Project:R R36
 U 1 1 5CDF46A5
 P 2100 4000
 F 0 "R36" V 2030 4000 50  0000 C CNN
-F 1 "10k" V 2170 4000 50  0000 C CNN
+F 1 "100k" V 2170 4000 50  0000 C CNN
 F 2 "LibreSolar:R_0603_1608" H 2100 4000 50  0001 C CNN
 F 3 "" H 2100 4000 50  0000 C CNN
 F 4 "Yageo" H -350 -1650 50  0001 C CNN "Manufacturer"
-F 5 "RC0603FR-0710KL" H -350 -1650 50  0001 C CNN "PartNumber"
+F 5 "RC0603FR-07100KL" H -350 -1650 50  0001 C CNN "PartNumber"
 	1    2100 4000
 	1    0    0    1   
 $EndComp

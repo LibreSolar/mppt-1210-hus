@@ -1,13 +1,13 @@
 EESchema Schematic File Version 4
-LIBS:mppt-10a-cache
+LIBS:mppt-1210-hus-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 4
 Title "10A MPPT Charge Controller with USB"
-Date "2019-04-09"
-Rev "0.6"
+Date "2019-06-03"
+Rev "0.6.1"
 Comp "Libre Solar / Connected Energy"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
@@ -32,8 +32,8 @@ U 58C18D5C
 F0 "Power Supply" 50
 F1 "power_supply.sch" 50
 $EndSheet
-Text Notes 2300 1500 0    200  ~ 0
-10A MPPT Solar Charge Controller with USB
+Text Notes 2000 1500 0    200  ~ 0
+12V / 10A MPPT Solar Charge Controller with USB
 Text Notes 2600 4700 0    100  ~ 0
 Main Specifications
 Text Notes 2600 5500 0    50   ~ 0
