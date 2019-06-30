@@ -2,6 +2,8 @@
 
 ![Development Stage](https://img.shields.io/badge/development%20stage-release%20candidate-yellow.svg) Tested prototype, only minor issues left.
 
+User manual: [HTML](https://libre.solar/mppt-1210-hus/) / [PDF](https://libre.solar/mppt-1210-hus/manual.pdf)
+
 Schematic: [PDF file](mppt-1210-hus.pdf) in repository
 
 Gerber files: [PCB ordering](http://libre.solar/docs/pcb_ordering) documentation
@@ -28,3 +30,9 @@ Bill of Materials: [BOM export](http://libre.solar/docs/bom) from KiCAD
 - PV short circuit
 - PV reverse polarity (for max. module open circuit voltage of around 40V)
 - Battery reverse polarity (destructive, fuse is blown)
+
+## Manual
+
+The manual is auto-generated from the markdown files in the `manual` subfolder. See [here](https://github.com/LibreSolar/md-manual-template) for further information regarding the automated deployment.
+
+You can contribute to the manual by cloning the repository to your private GitHub workspace and sending pull-requests with upates you made.

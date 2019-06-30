@@ -1,0 +1,39 @@
+dist: xenial
+
+cache:
+    apt: true
+
+addons:
+    apt:
+        packages:
+            - texlive
+            - texlive-latex-extra
+            - texlive-fonts-extra
+            - texlive-lang-german
+            - texlive-lang-english
+            - lmodern
+            - latex-xcolor
+
+script:
+    # debian-supplied pandoc is very old --> install manually
+    - wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb
+    - sudo dpkg -i pandoc-2.7.3-1-amd64.deb
+    - rm pandoc-2.7.3-1-amd64.deb
+
+    # build manual
+    - cd manual
+    - make all
+    - mkdir build
+    - cp manual.html build/index.html
+    - cp manual.pdf build/
+    - cp -r template/ build/
+    - cp -r images/ build/
+
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GH_REPO_TOKEN
+    local-dir: manual/build
+    keep-history: false
+    on:
+        branch: master
