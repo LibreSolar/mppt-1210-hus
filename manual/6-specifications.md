@@ -5,9 +5,9 @@ Feature                         Value                   Comment
 ------------------------------  ----------------------- ------------------------------------
 **Battery**
 
-Nominal voltage                 12 / 24 V               auto-detect
+Nominal system voltage          12 V
 
-Maximum voltage                 32 V
+Maximum voltage                 16 V
 
 Maximum charge current          10 A
 
@@ -15,13 +15,13 @@ Quiescent current               < 10 mA
 
 **PV module input**
 
-Maximum open circuit voltage    55 V                    low temperature to be considered
+Maximum open circuit voltage    50 V                    low temperature to be considered
 
 Maximum short circuit current   10 A
 
 Maximum nominal power           150 W
 
-Conversion efficiency           >99% max.
+Conversion efficiency           >98% max.
 
 **Load output**
 
@@ -31,7 +31,7 @@ Switch type                     high-side
 
 **USB charging port**
 
-Maximum current                 2.0 A                   for both ports
+Maximum current                 2.0 A                   total for both ports
 
 **Standard settings**
 
@@ -84,7 +84,7 @@ Humidity                        <95%, non-condensing
 
 Screw terminals                 max. 6 mm² / AWG?
 
-Type of fuse                    15 A                    Automotive blade fuse (ATO)
+Type of internal fuse           15 A                    Automotive blade fuse (ATO)
 
 Protection class                IP 20
 

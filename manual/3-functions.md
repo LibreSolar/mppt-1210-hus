@@ -4,9 +4,9 @@ The following chapter describes the primary functions of the charge controller. 
 
 ## MPPT
 
-This charge controller is so-called maximum power point tracking (MPPT), which automatically adapts its input voltage to the connected solar panel to extracts as much power as possible.
+This charge controller is a so-called maximum power point tracker (MPPT), which automatically adapts its input voltage to the connected solar panel to extracts as much power as possible.
 
-The MPPT function can only be achieved using a so-called DC/DC converter, which is the core part of the charge controller PCB. It can be recognized by the large inductor and the large electrolytic input and output filter capacitors.
+The MPPT function can only be achieved using a DC/DC converter, which is the core part of the charge controller PCB. It can be recognized by the large inductor and the large electrolytic input and output filter capacitors.
 
 ## Three-stage battery charging
 
