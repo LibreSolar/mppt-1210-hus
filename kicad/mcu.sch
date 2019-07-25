@@ -5,10 +5,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
-Title "10A MPPT Charge Controller with USB"
-Date "2019-06-03"
-Rev "0.6.1"
-Comp "Libre Solar / Connected Energy"
+Title "MPPT 1210 HUS"
+Date "2019-07-24"
+Rev "0.7.1"
+Comp "Libre Solar"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
 Comment3 ""
@@ -241,7 +241,7 @@ Text Notes 4900 5100 0    100  ~ 0
 Status LEDs
 Text Notes 2800 1250 0    100  ~ 0
 MCU STM32L072
-Text Notes 9700 1000 0    100  ~ 0
+Text Notes 9400 1000 0    100  ~ 0
 STM Nucleo SWD
 Text Label 1600 4300 0    50   ~ 0
 USART1_TX
@@ -335,12 +335,12 @@ If not stated otherwise, all MLCC 50V X7R
 $Comp
 L power:+3.3V #PWR0101
 U 1 1 5AE4F2FA
-P 5700 1400
-F 0 "#PWR0101" H 5700 1250 50  0001 C CNN
-F 1 "+3.3V" H 5700 1540 50  0000 C CNN
-F 2 "" H 5700 1400 50  0000 C CNN
-F 3 "" H 5700 1400 50  0000 C CNN
-	1    5700 1400
+P 5700 1500
+F 0 "#PWR0101" H 5700 1350 50  0001 C CNN
+F 1 "+3.3V" H 5700 1640 50  0000 C CNN
+F 2 "" H 5700 1500 50  0000 C CNN
+F 3 "" H 5700 1500 50  0000 C CNN
+	1    5700 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -415,7 +415,7 @@ F 5 "302-S101" H 6300 1800 50  0001 C CNN "PartNumber"
 	1    6300 1800
 	1    0    0    -1  
 $EndComp
-Text Notes 6100 1000 0    100  ~ 0
+Text Notes 5800 1000 0    100  ~ 0
 UEXT connector
 Text Notes 7850 1000 0    100  ~ 0
 I2C pull-ups
@@ -450,7 +450,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 1600 5900 1600
 Wire Wire Line
-	5700 1600 5700 1400
+	5700 1600 5700 1500
 Text Label 4000 4100 2    50   ~ 0
 I2C1_SDA
 Text Label 4000 4000 2    50   ~ 0
@@ -622,7 +622,7 @@ Wire Wire Line
 Wire Wire Line
 	2200 3500 1600 3500
 Text Notes 4150 3850 0    50   ~ 0
-LED1 could becontrolled\nby LPTIM1_OUT in stop\nmode --> use PB2
+LED1 could be controlled\nby LPTIM1_OUT in stop\nmode --> use PB2
 Wire Wire Line
 	2200 3900 1600 3900
 Wire Wire Line
@@ -698,23 +698,6 @@ F 5 "RC0603FR-072K2L" H 4150 -1200 50  0001 C CNN "PartNumber"
 	1    8950 4150
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR04
-U 1 1 5BA050D5
-P 4800 2700
-F 0 "#PWR04" H 4800 2450 50  0001 C CNN
-F 1 "GND" H 4800 2550 50  0000 C CNN
-F 2 "" H 4800 2700 50  0000 C CNN
-F 3 "" H 4800 2700 50  0000 C CNN
-	1    4800 2700
-	1    0    0    -1  
-$EndComp
-Text Label 4800 2100 3    50   ~ 0
-BOOT0
-Wire Wire Line
-	4800 2400 4800 2100
-Wire Wire Line
-	4800 2600 4800 2700
 Text Notes 1250 1550 0    50   ~ 0
 Measured current into\nVDDA around 1.2 mA
 Text Notes 1050 2650 0    50   ~ 0
@@ -962,7 +945,7 @@ F 0 "C44" H 8825 5975 50  0000 L CNN
 F 1 "10n" H 8825 5825 50  0000 L CNN
 F 2 "LibreSolar:C_0603_1608" H 8800 5700 50  0001 C CNN
 F 3 "" H 8825 5975 50  0000 C CNN
-F 4 "Yageo" H 0   50  50  0001 C CNN "Manufacturer"
+F 4 "Murata" H 0   50  50  0001 C CNN "Manufacturer"
 F 5 "GCM188R72A103KA37D" H -500 100 50  0001 C CNN "PartNumber"
 	1    8800 5900
 	1    0    0    -1  
@@ -1009,17 +992,17 @@ Wire Wire Line
 	8000 5500 8000 5600
 Connection ~ 8000 5600
 Text Notes 9300 5650 0    100  ~ 0
-Temperature\n(external or \ninternal)
+Temperature\n(ext. or int.)
 Text GLabel 8900 5600 2    50   Output ~ 0
 T_BAT
 Wire Wire Line
 	8800 5600 8900 5600
 Text Label 7350 5600 0    50   ~ 0
 TEMP_EXT
-Text Notes 9150 6100 0    50   ~ 0
-Either internal SMD NTC\nsoldered or external \nsensor via 6P6C connector
+Text Notes 9300 6100 0    50   ~ 0
+Either internal SMD NTC on PCB or\nexternal sensor via 6P6C connector
 Text Notes 7100 2600 0    100  ~ 0
-Serial interface
+LS.one interface
 Wire Wire Line
 	7300 3900 7300 4000
 Wire Wire Line

@@ -1,3 +1,2 @@
 (fp_lib_table
-  (lib (name LibreSolar_github)(type Github)(uri https://github.com/LibreSolar/KiCad-footprints)(options allow_pretty_writing_to_this_dir)(descr "LibreSolar common footprints library"))
 )

@@ -389,7 +389,7 @@ F2 "LibreSolar:VSSOP-10_3.0x3.0mm_P0.5mm" 0 -900 50 H I C CNN
 F3 "" -250 400 50 H I C CNN
 F4 "Texas Instruments" 0 -1000 50 H I C CNN "Manufacturer"
 DRAW
-S -350 350 350 -350 0 1 0 N
+S -350 350 350 -350 0 1 0 f
 X OUT1 1 500 200 150 L 50 50 1 1 O
 X VS 10 0 500 150 D 50 50 1 1 W
 X IN-1 2 -500 200 150 R 50 50 1 1 I
@@ -462,7 +462,7 @@ ENDDEF
 #
 # Jumper_NC_Small
 #
-DEF ~Jumper_NC_Small JP 0 30 N N 1 F N
+DEF Jumper_NC_Small JP 0 30 N N 1 F N
 F0 "JP" 0 80 50 H V C CNN
 F1 "Jumper_NC_Small" 10 -60 50 H I C CNN
 F2 "" 0 0 50 H V C CNN
@@ -478,7 +478,7 @@ ENDDEF
 #
 # Jumper_NO_Small
 #
-DEF ~Jumper_NO_Small JP 0 30 N N 1 F N
+DEF Jumper_NO_Small JP 0 30 N N 1 F N
 F0 "JP" 0 80 50 H V C CNN
 F1 "Jumper_NO_Small" 10 -60 50 H I C CNN
 F2 "" 0 0 50 H V C CNN
@@ -1031,7 +1031,7 @@ ENDDEF
 #
 # Logo_Open_Hardware_Small
 #
-DEF ~Logo_Open_Hardware_Small #LOGO 0 40 Y Y 1 F N
+DEF Logo_Open_Hardware_Small #LOGO 0 40 Y Y 1 F N
 F0 "#LOGO" 0 275 50 H I C CNN
 F1 "Logo_Open_Hardware_Small" 0 -225 50 H I C CNN
 F2 "" 0 0 50 H I C CNN
@@ -1490,7 +1490,7 @@ ENDDEF
 #
 # SW_PUSH
 #
-DEF ~SW_PUSH S 0 40 N N 1 F N
+DEF SW_PUSH S 0 40 N N 1 F N
 F0 "S" 0 -50 50 H V C CNN
 F1 "SW_PUSH" 0 -130 50 H I C CNN
 F2 "" -100 -150 50 H I C CNN

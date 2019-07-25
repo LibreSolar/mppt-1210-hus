@@ -5,10 +5,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
-Title "10A MPPT Charge Controller with USB"
-Date "2019-06-03"
-Rev "0.6.1"
-Comp "Libre Solar / Connected Energy"
+Title "MPPT 1210 HUS"
+Date "2019-07-24"
+Rev "0.7.1"
+Comp "Libre Solar"
 Comment1 "Author: Martin Jäger"
 Comment2 "Website: https://libre.solar"
 Comment3 ""
@@ -50,12 +50,12 @@ $EndComp
 $Comp
 L power:GND #PWR043
 U 1 1 58C30106
-P 4300 2600
-F 0 "#PWR043" H 4300 2350 50  0001 C CNN
-F 1 "GND" H 4300 2450 50  0000 C CNN
-F 2 "" H 4300 2600 50  0000 C CNN
-F 3 "" H 4300 2600 50  0000 C CNN
-	1    4300 2600
+P 4300 2700
+F 0 "#PWR043" H 4300 2450 50  0001 C CNN
+F 1 "GND" H 4300 2550 50  0000 C CNN
+F 2 "" H 4300 2700 50  0000 C CNN
+F 3 "" H 4300 2700 50  0000 C CNN
+	1    4300 2700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -590,7 +590,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 2100 4300 2500
 Wire Wire Line
-	4300 2500 4300 2600
+	4300 2500 4300 2700
 Connection ~ 4300 2500
 Wire Wire Line
 	3700 2500 4000 2500
