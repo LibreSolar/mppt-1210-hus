@@ -6,9 +6,9 @@ User manual: [HTML](https://libre.solar/mppt-1210-hus/) / [PDF](https://libre.so
 
 Schematic: [PDF file](mppt-1210-hus.pdf) in repository
 
-Gerber files: [PCB ordering](http://libre.solar/docs/pcb_ordering) documentation
+Gerber files: [PCB ordering](https://libre.solar/docs/pcb_ordering) documentation
 
-Bill of Materials: [BOM export](http://libre.solar/docs/bom) from KiCAD
+Bill of Materials: [Interactive BOM](https://libre.solar/mppt-1210-hus/bom.html)
 
 ![Charge controller PCB](mppt-1210-hus.jpg)
 
