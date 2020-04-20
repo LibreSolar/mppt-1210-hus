@@ -36,7 +36,7 @@ The USB port provides power supply for mobile devices like phones. The maximum c
 
 ## Communication interface
 
-This charge controller is equipped with a LS.one port, which incorportates an UART serial interface. It uses the [ThingSet communication protocol](https://thingset.github.io/) and allows configuration, monitoring and control of the charge controller.
+This charge controller is equipped with a LS.one port, which incorportates an UART serial interface. It uses the [ThingSet communication protocol](https://libre.solar/thingset/) and allows configuration, monitoring and control of the charge controller.
 
 ## Temperature compensation
 

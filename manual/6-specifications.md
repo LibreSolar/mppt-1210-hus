@@ -15,7 +15,9 @@ Quiescent current               < 10 mA
 
 **PV module input**
 
-Maximum open circuit voltage    50 V                    low temperature to be considered
+Maximum open circuit voltage    40 V                    low temperature to be considered
+
+Number of cells per module      36 to 48
 
 Maximum short circuit current   10 A
 
@@ -82,11 +84,11 @@ Humidity                        <95%, non-condensing
 
 **Mechanical design**
 
-Screw terminals                 max. 6 mm² / AWG?
+Screw terminals                 max. 6 mm² / AWG10
 
 Type of internal fuse           15 A                    Automotive blade fuse (ATO)
 
-Protection class                IP 20
+Protection class                IP 20                   with housing (3D files available)
 
 Weight
 
@@ -94,7 +96,7 @@ Dimensions
 
 **Standards**
 
-Power and function              EN/IEC 62509,
+Power and function              EN/IEC 62509,           Tested in non-certified lab only
                                 EN/IEC 62093
 ------------------------------  ----------------------- ------------------------------------
 

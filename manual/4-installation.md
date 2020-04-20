@@ -28,7 +28,7 @@ For Li-ion batteries you need to configure the voltage setpoints manually using 
 
 ## Solar modules
 
-The MPPT algorithm can automatically adapt to different types of modules. Any module with 36 to 60 cells in series is suitable. The maximum open circuit voltage even under cold ambient temperature conditions must be below 50 V. Even though the controller automatically derates its power in case of overload, the nominal power under standard test conditions (STC) of the module should not exceed 150 W.
+The MPPT algorithm can automatically adapt to different types of modules. Any module with 36 to 48 cells in series is suitable. The maximum open circuit voltage even under cold ambient temperature conditions must be below 40 V. Even though the controller automatically derates its power in case of overload, the nominal power under standard test conditions (STC) of the module should not exceed 150 W.
 
 Solar modules need direct sunlight to work properly. Indirect light and partial shading will reduce the performance. Make sure to face the module towards the sun.
 

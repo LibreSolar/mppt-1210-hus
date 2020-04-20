@@ -1,6 +1,6 @@
 # 10A MPPT Charge Controller with USB
 
-![Development Stage](https://img.shields.io/badge/development%20stage-release%20candidate-yellow.svg) Tested prototype, only minor issues left.
+![Development Stage](https://img.shields.io/badge/development%20stage-eval-yellow.svg) Evaluation phase
 
 User manual: [HTML](https://libre.solar/mppt-1210-hus/) / [PDF](https://libre.solar/mppt-1210-hus/manual.pdf)
 
@@ -13,22 +13,24 @@ Bill of Materials: [BOM export](http://libre.solar/docs/bom) from KiCAD
 ![Charge controller PCB](mppt-1210-hus.jpg)
 
 ## Features:
+
 - 12V battery voltage
+- 40V max. solar input (36 to 48-cell panels, ideally so-called 12V panels with 36 cells)
 - 10A max. charge current
-- 55V max. solar input
+- 10A max. load output current
 - Low-power 32bit ARM MCU (STM32L072)
 - Expandable via Olimex Universal Extension Connector (UEXT) featuring
    I2C, Serial and SPI interface (e.g. used for display, WIFI communication, etc.)
 - USB charging
 - High-side load switching
 
-
 ## Built-in protection:
+
 - Overvoltage
 - Undervoltage
 - Overcurrent
 - PV short circuit
-- PV reverse polarity (for max. module open circuit voltage of around 40V)
+- PV reverse polarity
 - Battery reverse polarity (destructive, fuse is blown)
 
 ## Manual
