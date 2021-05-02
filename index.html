@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <!-- pandoc template based on mdBook theme -->
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="author" content="Libre Solar / Martin Jäger" />
+    <meta name="dcterms.date" content="2021-05-02" />
+    <meta name="keywords" content="Markdown, Example" />
+    <title>User Manual – MPPT 1210 HUS</title>
+
+    <link rel="shortcut icon" href="template/favicon.ico">
+    <link rel="stylesheet" href="template/screen.css" />
+    <link rel="stylesheet" href="template/print.css" media="print">
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        span.underline{text-decoration: underline;}
+        div.column{display: inline-block; vertical-align: top; width: 50%;}
+    </style>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="template/fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+</head>
+<body class="light">
+
+
+    <!-- Provide site root to javascript -->
+    <script type="text/javascript">
+        var path_to_root = "";
+        var default_theme = "light";
+    </script>
+
+    <!-- Work around some values being stored in localStorage wrapped in quotes -->
+    <script type="text/javascript">
+        try {
+            var theme = localStorage.getItem('mdbook-theme');
+            var sidebar = localStorage.getItem('mdbook-sidebar');
+
+            if (theme.startsWith('"') && theme.endsWith('"')) {
+                localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+            }
+
+            if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+            }
+        } catch (e) { }
+    </script>
+
+    <!-- Set the theme before any content is loaded, prevents flash -->
+    <script type="text/javascript">
+        var theme;
+        try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+        if (theme === null || theme === undefined) { theme = default_theme; }
+        document.body.className = theme;
+        document.querySelector('html').className = theme + ' js';
+    </script>
+
+    <!-- Hide / unhide sidebar before it is displayed -->
+    <script type="text/javascript">
+        var html = document.querySelector('html');
+        var sidebar = 'hidden';
+        if (document.body.clientWidth >= 1080) {
+            try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+            sidebar = sidebar || 'visible';
+        }
+        html.classList.remove('sidebar-visible');
+        html.classList.add("sidebar-" + sidebar);
+    </script>
+
+    <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+        <div class="toc">
+            <ul>
+            <li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a><ul>
+            <li><a href="#disclaimer"><span class="toc-section-number">1.1</span> Disclaimer</a></li>
+            </ul></li>
+            <li><a href="#safety-instructions"><span class="toc-section-number">2</span> Safety Instructions</a></li>
+            <li><a href="#description-of-functions"><span class="toc-section-number">3</span> Description of Functions</a><ul>
+            <li><a href="#mppt"><span class="toc-section-number">3.1</span> MPPT</a></li>
+            <li><a href="#three-stage-battery-charging"><span class="toc-section-number">3.2</span> Three-stage battery charging</a></li>
+            <li><a href="#load-output"><span class="toc-section-number">3.3</span> Load output</a></li>
+            <li><a href="#usb-output"><span class="toc-section-number">3.4</span> USB output</a></li>
+            <li><a href="#communication-interface"><span class="toc-section-number">3.5</span> Communication interface</a></li>
+            <li><a href="#temperature-compensation"><span class="toc-section-number">3.6</span> Temperature compensation</a></li>
+            <li><a href="#led-indicator"><span class="toc-section-number">3.7</span> LED indicator</a></li>
+            </ul></li>
+            <li><a href="#installation"><span class="toc-section-number">4</span> Installation</a><ul>
+            <li><a href="#connection-order"><span class="toc-section-number">4.1</span> Connection order</a></li>
+            <li><a href="#compatible-batteries"><span class="toc-section-number">4.2</span> Compatible batteries</a></li>
+            <li><a href="#solar-modules"><span class="toc-section-number">4.3</span> Solar modules</a></li>
+            <li><a href="#mounting"><span class="toc-section-number">4.4</span> Mounting</a></li>
+            <li><a href="#wiring-and-grounding"><span class="toc-section-number">4.5</span> Wiring and Grounding</a></li>
+            </ul></li>
+            <li><a href="#specifications"><span class="toc-section-number">5</span> Specifications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="page-wrapper">
+
+        <div class="page">
+
+            <div id="menu-bar" class="menu-bar">
+                <div id="menu-bar-sticky-container">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">MPPT 1210 HUS</h1>
+
+                    <div class="right-buttons">
+                        <a onclick="window.print()" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fas fa-print"></i>
+                        </a>
+                        <a href="manual.pdf" title="View PDF file" aria-label="View PDF file">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                        </div>
+                </div>
+            </div>
+
+
+            <div id="content" class="content">
+                <main>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p>Thanks for using this Libre Solar charge controller.</p>
+<p>The manual describes the usage and most important functions of this specific device. Please visit the <a href="https://libre.solar">Libre Solar website</a> for general information about charge controllers and other devices for DC energy systems.</p>
+<p>Read this manual carefully and make sure you understand everything before starting with installation of the charge controller.</p>
+<p>Same as the hardware and firmware of the charge controller, also this manual is open source. If you find any error or have suggestions for improvement, please contribute to <a href="https://github.com/LibreSolar/MPPT-1210-HUS">the repository on GitHub</a>.</p>
+<h2 id="disclaimer"><span class="header-section-number">1.1</span> Disclaimer</h2>
+<p>Due to the fact we are not providing a product in the legal sense, we are also not providing any warranty in any aspect.</p>
+<p>The user manual described here has been written and checked with care and to the best of our knowledge.</p>
+<p>Libre Solar assumes no liability for the accuracy, completeness or quality of the information provided. Liability claims against the team for material, physical or immaterial damages caused by the use or non-use of the information provided or by the use of incorrect and/or incomplete information are excluded.</p>
+<p>All information and instructions are non-binding. Libre Solar reserves the right to change, supplement or delete parts of the pages or the entire document without prior notice.</p>
+<div style="text-align:center">
+<p><img style="padding:30px" src="./images/cc-by-sa.png" alt="CC-BY-SA" /></p>
+</div>
+<h1 id="safety-instructions"><span class="header-section-number">2</span> Safety Instructions</h1>
+<p>The charge controller shall be used only for the intended application.</p>
+<ul>
+<li><p>The maximum voltage and power of the connected solar panel must not exceed the limits of the charge controller. Make sure to consider also the increased voltage of solar panels at low ambient temperatures.</p></li>
+<li><p>Ensure that the charge controller is configured correctly for the used battery type.</p></li>
+<li><p>Use lithium ion batteries (e.g. LiFePO4) only if they contain an integrated battery management system (BMS) for additional protection.</p></li>
+</ul>
+<p>Install the device considering general best practices for electrical and mechanical installations in accordance to laws in your country.</p>
+<ul>
+<li><p>An additional fuse must be installed as close to the battery positive terminal as possible.</p></li>
+<li><p>As sparks can occur during connection of the battery or solar panel wires, don’t install the charge controller close to any flammable materials.</p></li>
+<li><p>The wire cross-section has to be large enough to handle at least the maximum specified current of the charge controller.</p></li>
+<li><p>Use insulated tools only.</p></li>
+<li><p>Fix the wires outside the charge controller to provide a strain relief.</p></li>
+<li><p>Mount the device vertically on a solid, non-inflammable wall only, with the battery terminals facing downwards.</p></li>
+<li><p>Keep free space for ventilation next to the device and don’t cover the housing.</p></li>
+</ul>
+<h1 id="description-of-functions"><span class="header-section-number">3</span> Description of Functions</h1>
+<p>The following chapter describes the primary functions of the charge controller. With expert knowledge, the firmware can be adjusted to suit your own needs and implement new features, including different control algorithms, wireless communication interfaces, displays, etc.</p>
+<h2 id="mppt"><span class="header-section-number">3.1</span> MPPT</h2>
+<p>This charge controller is a so-called maximum power point tracker (MPPT), which automatically adapts its input voltage to the connected solar panel to extracts as much power as possible.</p>
+<p>The MPPT function can only be achieved using a DC/DC converter, which is the core part of the charge controller PCB. It can be recognized by the large inductor and the large electrolytic input and output filter capacitors.</p>
+<h2 id="three-stage-battery-charging"><span class="header-section-number">3.2</span> Three-stage battery charging</h2>
+<p>The advanced 3-stage battery charging increases life of lead-acid batteries. The setpoints for the different stages are fully configurable via the serial interface and can be adjusted to your system setup.</p>
+<ul>
+<li><p><strong>Bulk stage</strong></p>
+<p>The battery is charged with maximum possible current until the topping stage voltage limit is reached. This is the stage where the MPPT algorithm is active.</p></li>
+<li><p><strong>Topping stage</strong></p>
+<p>The batteries are charged for some time using the maximum charge voltage. After a current cutoff limit or a time limit is reached, the charger goes into trickle mode for lead-acid batteries or into standby mode for Li-ion batteries.</p>
+<p>This stage is also called <strong>absorption</strong> mode. In case of Li-ion batteries, this is the constant voltage (CV) charging phase.</p></li>
+<li><p><strong>Trickle stage</strong></p>
+<p>This stage is kept forever for a lead-acid battery and keeps the battery at full state of charge. If too much power is drawn from the battery, the charger automatically goes back to bulk charging stage.</p></li>
+</ul>
+<h2 id="load-output"><span class="header-section-number">3.3</span> Load output</h2>
+<p>In order to protect the battery from deep-discharge, consumers connected to the load ouput are automatically disconnected at low state of charge. As soon as the voltage rises again, the load port is switched back on.</p>
+<h2 id="usb-output"><span class="header-section-number">3.4</span> USB output</h2>
+<p>The USB port provides power supply for mobile devices like phones. The maximum current per port is 1.5 A, with 2.0 A maximum for both ports.</p>
+<h2 id="communication-interface"><span class="header-section-number">3.5</span> Communication interface</h2>
+<p>This charge controller is equipped with a LS.one port, which incorportates an UART serial interface. It uses the <a href="https://libre.solar/thingset/">ThingSet communication protocol</a> and allows configuration, monitoring and control of the charge controller.</p>
+<h2 id="temperature-compensation"><span class="header-section-number">3.6</span> Temperature compensation</h2>
+<p>The battery voltage setpoints for the different charging stages have to be adjusted depending on the battery temperature. The temperature can either be estimated based on temperatures measured inside the charge controller or it can be directly measured at the battery using the external temperature sensor to maximize performance. The external temperature sensor is also connected via the LS.one port.</p>
+<h2 id="led-indicator"><span class="header-section-number">3.7</span> LED indicator</h2>
+<p>The bottom LED close to the USB port indicates if the load output and USB port are enabled. If the light goes off, it means the battery was low and the charge controller protected it from deep-discharging.</p>
+<p>The three middle LEDs indicate the state of charge (SOC) of the connected battery. More LEDs means more energy is present in the battery.</p>
+<p>The top LED can be freely configured by the firmware developer, e.g. to indicate data transmission.</p>
+<h1 id="installation"><span class="header-section-number">4</span> Installation</h1>
+<p>The following image describes the different terminals and interfaces of the charge controller PCB.</p>
+<figure>
+<img src="images/charge-controller-connection.png" alt="" /><figcaption>Charge controller connection diagram</figcaption>
+</figure>
+<p>The charge controller features a high-side load switch and should be grounded at the negative battery terminal. There should be no additional grounding of the system. Most important, the wires to the solar panel should not be connected anywhere else except for the charge controller PV input.</p>
+<h2 id="connection-order"><span class="header-section-number">4.1</span> Connection order</h2>
+<ol type="1">
+<li><p>Connect the battery to the battery port. As the fuse inside the charge controller cannot protect the wire between battery and charge controller, an additional fuse should be installed close to the poitive battery terminal. Small sparks during connection of the battery are normal and acceptable.</p></li>
+<li><p>Cover the solar panel and afterwards connect the wires to the PV input terminal.</p></li>
+<li><p>As a last step, connect the loads like lights, etc. to the load output.</p></li>
+</ol>
+<p>The charge controller is now ready to use.</p>
+<p>Disconnection should be done in opposite order.</p>
+<h2 id="compatible-batteries"><span class="header-section-number">4.2</span> Compatible batteries</h2>
+<p>This charge controller can charge any battery with a nominal voltage of 12 V.</p>
+<p>The default settings are safe for all lead-acid batteries, but should be adjusted according to the information provided in the battery datasheet.</p>
+<p>For Li-ion batteries you need to configure the voltage setpoints manually using the LS.one serial interface. You must also deactivate the float charging stage.</p>
+<h2 id="solar-modules"><span class="header-section-number">4.3</span> Solar modules</h2>
+<p>The MPPT algorithm can automatically adapt to different types of modules. Any module with 36 to 48 cells in series is suitable. The maximum open circuit voltage even under cold ambient temperature conditions must be below 40 V. Even though the controller automatically derates its power in case of overload, the nominal power under standard test conditions (STC) of the module should not exceed 150 W.</p>
+<p>Solar modules need direct sunlight to work properly. Indirect light and partial shading will reduce the performance. Make sure to face the module towards the sun.</p>
+<p>Read the datasheet of your solar module for more information about the specifications.</p>
+<h2 id="mounting"><span class="header-section-number">4.4</span> Mounting</h2>
+<p>Fix the device vertical at non-flammable surface with the power terminals facing downwards.</p>
+<p>The charge controller should be mounted as close to the battery as possible, but avoiding any contact with battery acid or gas emissions.</p>
+<p>Never mount the device in a fuel storage compartment, as the fuse can create sparks.</p>
+<h2 id="wiring-and-grounding"><span class="header-section-number">4.5</span> Wiring and Grounding</h2>
+<p>The minimum wire cross-section should be 2.5 mm². It is recommended to use 6 mm² wires, which is the maximum the terminals can handle.</p>
+<p>The length between charge controller and battery should be less than 1 m.</p>
+<p>Use suitable fuses in the wiring harness connected to the load terminal if the cross-section is decreased.</p>
+<p>If necessary, only ground the energy system at a single point, which should be at the negative battery terminal.</p>
+<h1 id="specifications"><span class="header-section-number">5</span> Specifications</h1>
+<table>
+<caption>Overview of specifications</caption>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 25%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Battery</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nominal system voltage</td>
+<td style="text-align: left;">12 V</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maximum voltage</td>
+<td style="text-align: left;">16 V</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximum charge current</td>
+<td style="text-align: left;">10 A</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Quiescent current</td>
+<td style="text-align: left;">&lt; 10 mA</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>PV module input</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maximum open circuit voltage</td>
+<td style="text-align: left;">40 V</td>
+<td style="text-align: left;">low temperature to be considered</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Number of cells per module</td>
+<td style="text-align: left;">36 to 48</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maximum short circuit current</td>
+<td style="text-align: left;">10 A</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximum nominal power</td>
+<td style="text-align: left;">150 W</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Conversion efficiency</td>
+<td style="text-align: left;">&gt;98% max.</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Load output</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maximum current</td>
+<td style="text-align: left;">10 A</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Switch type</td>
+<td style="text-align: left;">high-side</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>USB charging port</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maximum current</td>
+<td style="text-align: left;">2.0 A</td>
+<td style="text-align: left;">total for both ports</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Standard settings</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Battery type</td>
+<td style="text-align: left;">Lead-acid</td>
+<td style="text-align: left;">safe general settings, also suitable for LFP</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Charge algorithm</td>
+<td style="text-align: left;">3-stage</td>
+<td style="text-align: left;">configurable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Topping / absorption voltage</td>
+<td style="text-align: left;">14.4 V</td>
+<td style="text-align: left;">configurable</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Trickle charging</td>
+<td style="text-align: left;">13.8 V</td>
+<td style="text-align: left;">configurable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Load disconnect voltage</td>
+<td style="text-align: left;">11.7 V</td>
+<td style="text-align: left;">configurable, current-compensated</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Load reconnect voltage</td>
+<td style="text-align: left;">12.3 V</td>
+<td style="text-align: left;">configurable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Temperature compensation</td>
+<td style="text-align: left;">-3 mV/K/cell</td>
+<td style="text-align: left;">configurable</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Interfaces</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">UEXT</td>
+<td style="text-align: left;">I2C, SPI, UART</td>
+<td style="text-align: left;">internal, can be used for displays, etc.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LS.one</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">for external communication</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Protection</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Overvoltage</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Undervoltage</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Overcurrent</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PV short circuit</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PV reverse polarity</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">for max. module open circuit voltage of around 40V</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Battery reverse polarity</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">destructive, fuse is blown</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Environmental conditions</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Operating ambient temperature</td>
+<td style="text-align: left;">-10 °C to +50 °C</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Storage temperature</td>
+<td style="text-align: left;">-20 °C to +60 °C</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Humidity</td>
+<td style="text-align: left;">&lt;95%, non-condensing</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Mechanical design</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Screw terminals</td>
+<td style="text-align: left;">max. 6 mm² / AWG10</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Type of internal fuse</td>
+<td style="text-align: left;">15 A</td>
+<td style="text-align: left;">Automotive blade fuse (ATO)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Protection class</td>
+<td style="text-align: left;">IP 20</td>
+<td style="text-align: left;">with housing (3D files available)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Weight</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dimensions</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Standards</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Power and function</td>
+<td style="text-align: left;">EN/IEC 62509, EN/IEC 62093</td>
+<td style="text-align: left;">Tested in non-certified lab only</td>
+</tr>
+</tbody>
+</table>
+                </main>
+
+                <nav class="nav-wrapper" aria-label="Page navigation">
+                    <!-- Mobile navigation buttons -->
+
+
+
+
+                    <div style="clear: both"></div>
+                </nav>
+            </div>
+        </div>
+
+        <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+        </nav>
+
+    </div>
+
+    <script src="template/book.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
