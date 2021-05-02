@@ -13,8 +13,8 @@ addons:
             - texlive-lang-english
             - lmodern
             - latex-xcolor
-            - python-wxgtk3.0
-            - xvfb                  # needed for headless wxGTK
+            #- python-wxgtk3.0
+            #- xvfb                  # needed for headless wxGTK
 
 script:
     # debian-supplied pandoc is very old --> install manually
@@ -31,16 +31,19 @@ script:
     - cp -r template/ build/
     - cp -r images/ build/
 
+    # also deploy interactive BOM
+    - cp ../build/*_ibom.html build
+
     # install KiCad
-    - sudo add-apt-repository --yes ppa:js-reynaud/kicad-5.1
-    - sudo apt update
-    - sudo apt install --no-install-recommends kicad
+    #- sudo add-apt-repository --yes ppa:js-reynaud/kicad-5.1
+    #- sudo apt update
+    #- sudo apt install --no-install-recommends kicad
 
     # generate interactive BOM
-    - cd ..
-    - git clone https://github.com/openscopeproject/InteractiveHtmlBom bom-generator
-    - xvfb-run python bom-generator/InteractiveHtmlBom/generate_interactive_bom.py --no-browser kicad/mppt-1210-hus.kicad_pcb
-    - cp kicad/bom/ibom.html manual/build/bom.html
+    #- cd ..
+    #- git clone https://github.com/openscopeproject/InteractiveHtmlBom bom-generator
+    #- xvfb-run python bom-generator/InteractiveHtmlBom/generate_interactive_bom.py --no-browser kicad/mppt-1210-hus.kicad_pcb
+    #- cp kicad/bom/ibom.html manual/build/bom.html
 
 deploy:
     provider: pages
@@ -49,4 +52,4 @@ deploy:
     local-dir: manual/build
     keep-history: false
     on:
-        branch: master
+        branch: main

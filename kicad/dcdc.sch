@@ -1,17 +1,16 @@
 EESchema Schematic File Version 4
-LIBS:mppt-1210-hus-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 4
 Title "MPPT 1210 HUS"
-Date "2019-07-24"
+Date "2021-05-02"
 Rev "0.7.1"
-Comp "Libre Solar"
-Comment1 "Author: Martin Jäger"
-Comment2 "Website: https://libre.solar"
-Comment3 ""
+Comp "Copyright © 2019 Libre Solar Technologies GmbH"
+Comment1 "Licensed under CERN-OHL-W version 2"
+Comment2 "Author: Martin Jäger"
+Comment3 "Licensed under CERN-OHL-W version 2"
 Comment4 ""
 $EndDescr
 $Comp
@@ -196,10 +195,12 @@ F 5 "RC1206FR-072R2L" H -300 200 50  0001 C CNN "PartNumber"
 	1    0    0    1   
 $EndComp
 $Comp
-L Device:L_Core_Iron L1
+L Device:L L1
 U 1 1 58ACD441
 P 7000 1900
-F 0 "L1" V 7125 1900 50  0000 C CNN
+AR Path="/58ACD441" Ref="L1"  Part="1" 
+AR Path="/58A68DC9/58ACD441" Ref="L1"  Part="1" 
+F 0 "L1" V 7100 1900 50  0000 C CNN
 F 1 "47uH" V 6925 1900 50  0000 C CNN
 F 2 "LibreSolar:L-FERYSTER-DTMSS-27_47uH" V 7200 1900 50  0001 C CNN
 F 3 "" H 7000 1900 50  0001 C CNN

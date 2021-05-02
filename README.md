@@ -4,13 +4,13 @@
 
 User manual: [HTML](https://libre.solar/mppt-1210-hus/) / [PDF](https://libre.solar/mppt-1210-hus/manual.pdf)
 
-Schematic: [PDF file](mppt-1210-hus.pdf) in repository
+Schematic: [PDF file](build/mppt-1210-hus_schematic.pdf)
 
-Gerber files: [PCB ordering](https://libre.solar/docs/pcb_ordering) documentation
+Bill of Materials: [CSV file](build/mppt-1210-hus_bom.csv) or [interactive HTML BOM](https://libre.solar/mppt-1210-hus/mppt-1210-hus_ibom.html)
 
-Bill of Materials: [Interactive BOM](https://libre.solar/mppt-1210-hus/bom.html)
+Firmware repository: [LibreSolar/charge-controller-firmware](https://github.com/LibreSolar/charge-controller-firmware)
 
-![Charge controller PCB](mppt-1210-hus.jpg)
+![Charge controller PCB](build/mppt-1210-hus_board.jpg)
 
 ## Features:
 

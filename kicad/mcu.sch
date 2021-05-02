@@ -1,17 +1,16 @@
 EESchema Schematic File Version 4
-LIBS:mppt-1210-hus-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
 Title "MPPT 1210 HUS"
-Date "2019-07-24"
+Date "2021-05-02"
 Rev "0.7.1"
-Comp "Libre Solar"
-Comment1 "Author: Martin Jäger"
-Comment2 "Website: https://libre.solar"
-Comment3 ""
+Comp "Copyright © 2019 Libre Solar Technologies GmbH"
+Comment1 "Licensed under CERN-OHL-W version 2"
+Comment2 "Author: Martin Jäger"
+Comment3 "Licensed under CERN-OHL-W version 2"
 Comment4 ""
 $EndDescr
 $Comp

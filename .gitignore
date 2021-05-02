@@ -1,24 +1,15 @@
-# For PCBs designed using Eagle
-
-# Lock files
-*.lck
-
-# Backup files
-*.b#*
-*.s#*
-*backup*
-
-
 # For PCBs designed using KiCad: http://www.kicad-pcb.org/
 
 # Temporary files
 *.000
 *.bak
+*-bak
 *.bck
-*.kicad_pcb-bak
 *~
 _autosave-*
 *.tmp
+fp-info-cache
+.~lock*
 
 # Netlist files (exported from Eeschema)
 *.net
@@ -27,6 +18,13 @@ _autosave-*
 *.dsn
 *.ses
 
-# Exported BOM files
+# Temporary BOM file
 *.xml
-#*.csv
+
+# Converted BOM files (only .csv files allowed)
+*.ods
+*.xlsx
+
+# Exported CAD files
+*.step
+*.stp
