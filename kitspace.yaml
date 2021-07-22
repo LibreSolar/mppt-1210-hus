@@ -1,0 +1,5 @@
+site: https://libre.solar/mppt-1210-hus/
+bom: build/mppt-1210-hus_bom.csv
+eda:
+  type: kicad
+  pcb: kicad/mppt-1210-hus.kicad_pcb
