@@ -48,4 +48,14 @@ The bottom LED close to the USB port indicates if the load output and USB port a
 
 The three middle LEDs indicate the state of charge (SOC) of the connected battery. More LEDs means more energy is present in the battery.
 
+| LED ID | ON                            | 
+|--------|-------------------------------| 
+| LED 1  | battery SOC low               | 
+| LED 2  | battery SOC middle            | 
+| LED 3  | battery SOC high              | 
+| LED 4  | Load and USB port enabled     | 
+| LED 5  | free for costum configuration | 
+
+
+
 The top LED can be freely configured by the firmware developer, e.g. to indicate data transmission.
